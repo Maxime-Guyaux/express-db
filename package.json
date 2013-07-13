@@ -12,7 +12,9 @@
     "db"
   ],
   "dependencies": {
-    "express": "~3.3.4"
+    "express": "~3.3.4",
+    "nconf": "~0.6.7",
+    "colors": "~0.6.0-1"
   },
   "devDependencies": {
     "vows": "~0.7.0"
