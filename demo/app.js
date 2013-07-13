@@ -7,12 +7,18 @@ var express = require('express'),
 
 	app.use(expressDB.init("demo DB"));
 
-	console.log("DB info: ", expressDB.info());
+	// var begin = new Date();
+	// console.log("STARTED SET TEST: %s", begin.getTime().toString());
+	// for(var i = 0; i < 100000; i++) {
+	// 	expressDB.set('test:'+i, i);
+	// }
+	// expressDB.backup(function() {
+	// 	var end = new Date();
+	// 	console.log("FINISHED SET TEST: %s", end.getTime().toString());
+	// 	console.log("100000 records set and backed up to file in : %s milliseconds", (end.getTime() - begin.getTime()).toString());
+	// });
+
 
 	app.get('/', function(req, res) {
 		res.send("hello world!");
-		// expressDB.backup(function(err) {
-		// 	if (err) throw err;
-		// 	else console.log('db is backed up');
-		// });
 	});
