@@ -5,20 +5,20 @@ var express = require('express'),
 		.createServer(app)
 		.listen(8081);
 
-	app.use(expressDB.init("demo DB"));
+app.use(expressDB.init("demo DB", {
+	file: './bin/demo.db.json', //custom db file
+	autoSave: true, //autosave enabled
+	backupInterval: 60000 //interval in ms
+}));
 
-	// var begin = new Date();
-	// console.log("STARTED SET TEST: %s", begin.getTime().toString());
-	// for(var i = 0; i < 100000; i++) {
-	// 	expressDB.set('test:'+i, i);
-	// }
-	// expressDB.backup(function() {
-	// 	var end = new Date();
-	// 	console.log("FINISHED SET TEST: %s", end.getTime().toString());
-	// 	console.log("100000 records set and backed up to file in : %s milliseconds", (end.getTime() - begin.getTime()).toString());
-	// });
-
-
-	app.get('/', function(req, res) {
-		res.send("hello world!");
-	});
+app.get('/', function(req, res) {
+	res.send("hello world!");
+	if(!expressDB.get('foo')) {
+		expressDB.set('foo', 'bar');
+		expressDB.backup(function() {
+			console.log('foo is now set to : %s', expressDB.get('foo'));
+		});
+	} else {
+		console.log('foo is already set to : %s', expressDB.get('foo'));
+	}
+});
