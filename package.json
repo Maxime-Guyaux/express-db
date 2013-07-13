@@ -2,10 +2,11 @@
   "name": "expressDB",
   "author": "Stéphane P. Péricat <contact@shortwavapp.com>",
   "version": "0.0.1",
-  "description": "a local db for express",
+  "description": "A local db for express.js",
   "preferGlobal": false,
   "analyse": false,
   "main": "./lib/expressDB",
+  "scripts": {},
   "keywords": [
     "node",
     "express",
@@ -18,5 +19,9 @@
   },
   "devDependencies": {
     "vows": "~0.7.0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
   }
 }

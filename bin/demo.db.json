@@ -1,0 +1,9 @@
+{
+  "info": {
+    "version": "0.0.1",
+    "name": "demo DB"
+  },
+  "data": {
+    "foo": "bar"
+  }
+}
