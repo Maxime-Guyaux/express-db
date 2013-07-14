@@ -50,7 +50,7 @@ _Example_:
 		autoSave: true, //autosave enabled
 		backupInterval: 60000, //interval in ms,
 		viewCaching: true //cache views then requested
-	})
+	});
 
 ####info()###
 
@@ -104,6 +104,25 @@ Creates a view exposbale to the client side of the express.js application. Query
 Returns the views defined for the current database.
 
 	xdb.getViews(); // => {'comments': {'query': 'stats.comments_lookup[{stats.page.id}]', cache: null}, ...}
+
+###Use you own db file###
+
+If you so chose, you can use you own db file for backup. It will need to be a json file, with the following default structure:
+
+	{
+		"info": {
+			"version": "0.0.1" //version number should match the version of express-db
+		},
+		"data": {
+
+		}
+	}
+
+You will then need to define it in the xdb constructor:
+
+	xdb.init("my custom DB", {
+		file: './my.custom.db.json'
+	});
 
 ##Test##
 
