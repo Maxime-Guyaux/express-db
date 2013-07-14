@@ -103,7 +103,7 @@ Creates a view exposbale to the client side of the express.js application. Query
 
 Returns the views defined for the current database.
 
-	xdb.getViews(); // {'view1': {'query': '', cache: null}, ...}
+	xdb.getViews(); // => {'view1': {'query': '', cache: null}, ...}
 
 ##Test##
 
