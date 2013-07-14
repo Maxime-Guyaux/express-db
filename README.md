@@ -17,7 +17,7 @@ If you want to help improve express-db, feel free to contribute by forking and s
 
 	var express = require('express'),
 		app = express(),
-		xdb = require('../lib/express-db'),
+		xdb = require('express-db'),
 		server = require('http')
 			.createServer(app)
 			.listen(8081);
@@ -123,7 +123,7 @@ If you so chose, you can use you own db file for backup. It will need to be a js
 You will then need to define it in the xdb constructor:
 
 	xdb.init("my custom DB", {
-		file: './my.custom.db.json'
+		file: '../my.custom.db.json' // '../' is necessary
 	});
 
 ##Test##
