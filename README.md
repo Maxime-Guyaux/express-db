@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/stephanepericat/express-db.png?branch=master)](https://travis-ci.org/stephanepericat/express-db)
+
 #express-db 0.0.1#
 
 A lightweight local key-value store that integrates with your express.js application.
