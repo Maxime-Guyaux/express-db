@@ -4,6 +4,10 @@
     "name": "demo DB"
   },
   "data": {
-    "foo": "bar"
+    "foo": "bar",
+    "posts": {
+      "first": "blablba",
+      "second": "blablba"
+    }
   }
 }

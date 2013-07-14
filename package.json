@@ -1,23 +1,26 @@
 {
-  "name": "expressDB",
+  "name": "express-db",
   "author": "Stéphane P. Péricat <contact@shortwavapp.com>",
   "version": "0.0.1",
-  "description": "A local db for express.js",
+  "description": "A simple local key-value store that integrates with your express.js application.",
   "preferGlobal": false,
   "analyse": false,
-  "main": "./lib/expressDB",
-  "scripts": {},
+  "main": "./lib/express-db",
+  "scripts": {
+    "test": "vows test/express-db-test.js -v --spec"
+  },
   "keywords": [
     "node",
     "express",
     "db"
   ],
   "dependencies": {
-    "express": "~3.3.4",
     "nconf": "~0.6.7",
-    "colors": "~0.6.0-1"
+    "colors": "~0.6.0-1",
+    "json-query": "~0.1.1"
   },
   "devDependencies": {
+    "express": "~3.3.4",
     "vows": "~0.7.0"
   },
   "license": "MIT",
