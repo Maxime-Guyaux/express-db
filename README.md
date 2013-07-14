@@ -112,12 +112,12 @@ Returns the views defined for the current database.
 If you so chose, you can use you own db file for backup. It will need to be a json file, with the following default structure:
 
 	{
-		"info": {
-			"version": "0.0.1" //version number should match the version of express-db
-		},
-		"data": {
+	  "info": {
+	    "version": "0.0.1" //version number should match the version of express-db
+	  },
+	  "data": {
 
-		}
+	  }
 	}
 
 You will then need to define it in the xdb constructor:
