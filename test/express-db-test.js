@@ -9,9 +9,18 @@ var vows = require('vows'),
 // 	//backupInterval: 60000 //interval in ms
 // });
 
-vows.describe('express-js').addBatch({
-	'the module': {
+vows.describe('express-db').addBatch({
+	'the express-db module': {
 		topic: xdb,
+		'is an object': function(xdb) {
+			assert.isObject(xdb);
+		},
+		'has an init method': function(xdb) {
+			assert.isFunction(xdb.init);
+		},
+		'has an info method': function(xdb) {
+			assert.isFunction(xdb.info);
+		},
 		'has a get method': function(xdb) {
 			assert.isFunction(xdb.get);
 		},
