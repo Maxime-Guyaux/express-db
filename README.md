@@ -34,7 +34,7 @@ If you want to help improve express-db, feel free to contribute by forking and s
 
 the init method, to be passed to express for hook.
 
-Options:
+_Options_:
 
  + file: (_optional_) path to your own db file
  + restrictAccess: (_optional_) true or false, restricts the access to the db on the client side
@@ -42,7 +42,7 @@ Options:
  + backupInterval: (_optional_) the frequency (in ms) of backups
  + viewCaching: (_optional_) true or false, caches the view result on browser call
 
-Example:
+_Example_:
 
 	xdb.init("demo DB", {
 		file: './bin/demo.db.json', //custom db file, if necessary
