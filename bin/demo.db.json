@@ -4,7 +4,6 @@
     "name": "demo DB"
   },
   "data": {
-    "foo": "bar",
     "posts": [
       {
         "title": "lorem ipsum"

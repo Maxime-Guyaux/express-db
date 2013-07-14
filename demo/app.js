@@ -13,14 +13,11 @@ app.use(xdb.init("demo DB", {
 }));
 
 app.get('/', function(req, res) {
-	if(!xdb.get('foo')) {
-		xdb.set('foo', 'bar');
-		xdb.backup(function() {
-			console.log('foo is now set to : %s', xdb.get('foo'));
-		});
-	} else {
-		console.log('foo is already set to : %s', xdb.get('foo'));
-	}
+	xdb.set('foo', 'bar');
+	console.log('foo ? %s', xdb.get('foo'));
+	xdb.remove('foo', function(err) {
+		console.log('is foo still here ? %s', xdb.get('foo'));
+	});
 
 	xdb.search('posts', function(res) {
 		console.log("search result: ", res);

@@ -27,11 +27,20 @@ vows.describe('express-db').addBatch({
 		'has a set method': function(xdb) {
 			assert.isFunction(xdb.set);
 		},
+		'has a remove method': function(xdb) {
+			assert.isFunction(xdb.remove);
+		},
 		'has a search method': function(xdb) {
 			assert.isFunction(xdb.search);
 		},
 		'has a backup method': function(xdb) {
 			assert.isFunction(xdb.backup);
+		},
+		'has a createView method': function(xdb) {
+			assert.isFunction(xdb.createView);
+		},
+		'has a getViews method': function(xdb) {
+			assert.isFunction(xdb.getViews);
 		}
 	},
 	'the info method': {
