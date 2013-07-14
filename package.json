@@ -1,7 +1,7 @@
 {
   "name": "express-db",
   "author": "Stéphane P. Péricat <contact@shortwavapp.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight local key-value store that integrates with your express.js application.",
   "preferGlobal": false,
   "analyse": false,

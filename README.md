@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/stephanepericat/express-db.png?branch=master)](https://travis-ci.org/stephanepericat/express-db)
 
-#express-db 0.0.1#
+#express-db 0.0.2#
 
 A lightweight local key-value store that integrates with your express.js application.
 
@@ -13,6 +13,28 @@ If you want to help improve express-db, feel free to contribute by forking and s
 
 ##Usage##
 
+###Create you own db file###
+
+The first thing to do is to create your own db file for backup. It will need to be a json file, with the following default structure:
+
+	{
+	  "info": {
+	    "version": "0.0.2",
+	    "name": "demo DB"
+	  },
+	  "data": {
+
+	  }
+	}
+
+'version' should be set to the version of express-db you are using, and 'name' should be the name of you db.
+
+You will then need to define it in the express-db constructor:
+
+	xdb.init("my custom DB", {
+		file: './my.custom.db.json'
+	});
+
 ###Integrate with express.js 3.x###
 
 	var express = require('express'),
@@ -23,7 +45,7 @@ If you want to help improve express-db, feel free to contribute by forking and s
 			.listen(8081);
 
 	app.use(xdb.init("demo DB", {
-		file: './db/demo.db.json', //custom db file, if necessary
+		file: './db/demo.db.json', //your db file
 		restrictAccess: false, //restrict access via browser
 		autoSave: true, //autosave enabled
 		backupInterval: 60000, //interval in ms,
@@ -36,18 +58,18 @@ If you want to help improve express-db, feel free to contribute by forking and s
 
 the init method, to be passed to express for hook.
 
-_Options_:
+*Options*:
 
- + file: (_optional_) path to your own db file
- + restrictAccess: (_optional_) true or false, restricts the access to the db on the client side
- + autoSave: (_optional_) enables automatic backup of the databse
- + backupInterval: (_optional_) the frequency (in ms) of backups
- + viewCaching: (_optional_) true or false, caches the view result on browser call
+ + file: (*required*) path to your own db file
+ + restrictAccess: (*optional*) true or false, restricts the access to the db on the client side
+ + autoSave: (*optional*) enables automatic backup of the databse
+ + backupInterval: (*optional*) the frequency (in ms) of backups
+ + viewCaching: (*optional*) true or false, caches the view result on browser call
 
-_Example_:
+*Example*:
 
 	xdb.init("demo DB", {
-		file: './db/demo.db.json', //custom db file, if necessary
+		file: './db/demo.db.json', //your db
 		restrictAccess: false, //restrict access via browser
 		autoSave: true, //autosave enabled
 		backupInterval: 60000, //interval in ms,
@@ -58,7 +80,7 @@ _Example_:
 
 Returns info on the current database.
 
-	xdb.info() // => {"version" : "0.0.1", "name": "demo DB"}
+	xdb.info() // => {"version" : "0.0.2", "name": "demo DB"}
 
 ####get(key)####
 
@@ -106,25 +128,6 @@ Creates a view exposbale to the client side of the express.js application. Query
 Returns the views defined for the current database.
 
 	xdb.getViews(); // => {'comments': {'query': 'stats.comments_lookup[{stats.page.id}]', cache: null}, ...}
-
-###Use you own db file###
-
-If you so chose, you can use you own db file for backup. It will need to be a json file, with the following default structure:
-
-	{
-	  "info": {
-	    "version": "0.0.1" //version number should match the version of express-db
-	  },
-	  "data": {
-
-	  }
-	}
-
-You will then need to define it in the xdb constructor:
-
-	xdb.init("my custom DB", {
-		file: './my.custom.db.json'
-	});
 
 ##Test##
 
