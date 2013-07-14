@@ -42,7 +42,9 @@ Options:
  + backupInterval: (_optional_) the frequency (in ms) of backups
  + viewCaching: (_optional_) true or false, caches the view result on browser call
 
- 	xdb.init("demo DB", {
+Example:
+
+	xdb.init("demo DB", {
 		file: './bin/demo.db.json', //custom db file, if necessary
 		restrictAccess: false, //restrict access via browser
 		autoSave: true, //autosave enabled
