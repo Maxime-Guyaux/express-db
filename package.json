@@ -9,6 +9,10 @@
   "scripts": {
     "test": "vows test/express-db-test.js -v --spec"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephanepericat/express-db.git"
+  },
   "keywords": [
     "node",
     "express",
