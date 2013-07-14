@@ -1,7 +1,9 @@
 #express-db 0.0.1#
 
-A simple local key-value store that integrates with your express.js application.<br/><br/>
-<b>warning</b> This module is in very early stage of development. Serious issues, like performance, scalability or security may occur. use at your own risk!<br/>If you want to help improve express-db, feel free to contribute by forking and sending pull requests!
+A simple local key-value store that integrates with your express.js application.
+
+**warning** This module is in very early stage of development. Serious issues, like performance, scalability or security may occur. use at your own risk!
+If you want to help improve express-db, feel free to contribute by forking and sending pull requests!
 
 ##Installation##
 
@@ -30,13 +32,14 @@ A simple local key-value store that integrates with your express.js application.
 
 ####init(options)####
 
-the init method, to be passed to express for hook.<br/>
+the init method, to be passed to express for hook.
+
 Options:
- - file: (<i>optional</i>) path to your own db file
- - restrictAccess: (<i>optional</i>) true or false, restricts the access to the db on the client side
- - autoSave: (<i>optional</i>) enables automatic backup of the databse
- - backupInterval: (<i>optional</i>) the frequency (in ms) of backups
- - viewCaching: (<i>optional</i>) true or false, caches the view result on browser call
+ - file: (_optional_) path to your own db file
+ - restrictAccess: (_optional_) true or false, restricts the access to the db on the client side
+ - autoSave: (_optional_) enables automatic backup of the databse
+ - backupInterval: (_optional_) the frequency (in ms) of backups
+ - viewCaching: (_optional_) true or false, caches the view result on browser call
 
 ##Test##
 
