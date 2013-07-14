@@ -1,6 +1,6 @@
 #express-db 0.0.1#
 
-A simple local key-value store that integrates with your express.js application.
+A lightweight local key-value store that integrates with your express.js application.
 
 **WARNING** This module is in very early stage of development. Serious issues, like performance, scalability or security may occur. Use at your **OWN RISK**!
 If you want to help improve express-db, feel free to contribute by forking and sending pull requests!
@@ -54,19 +54,56 @@ _Example_:
 
 ####info()###
 
+Returns info on the current database.
+
+	xdb.info() // => {"version" : "0.0.1", "name": "demo DB"}
+
 ####get(key)####
+
+Gets the value for a given key.
+
+	xdb.get('foo'); // => 'bar'
 
 ####set(key, value)####
 
+Sets a value for a give key.
+
+	xdb.set('foo', 'bar');
+
 ####remove(key)####
+
+Removes a given key.
+
+	xdb.remove('foo');
 
 ####backup(callback)####
 
+Forces an immediate backup to file of the current database.
+
+	xdb.backup(function(err) {
+		if(err) throw err;
+		else console.log('DB backed up at %s', new Date().toString());
+	});
+
 ####search(query)####
+
+Search through the JSON structure. Read the [json-query documentation](https://github.com/mmckegg/json-query/blob/master/README.md) for more details on query possibilities.
+
+	xdb.search('stats.comments_lookup[{stats.page.id}]', function(res) {
+		console.log("search result: ", res);
+	});
 
 ####createView(name, query)####
 
+Creates a view exposbale to the client side of the express.js application. Query system is also based on [json-query](https://github.com/mmckegg/json-query/blob/master/README.md).
+
+	xdb.createView('comments', 'stats.comments_lookup[{stats.page.id}]');
+
 ####getViews()####
+
+Returns the views defined for the current database.
+
+	xdb.getViews(); // {'view1': {'query': '', cache: null}, ...}
 
 ##Test##
 
