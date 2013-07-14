@@ -39,10 +39,10 @@ vows.describe('express-db').addBatch({
 		'returns an object': function(xdb) {
 			assert.isObject(xdb.info());
 		},
-		'has a version property': function(xdb) {
+		'returns an object with a version property': function(xdb) {
 			assert.isTrue(xdb.info() && xdb.info().hasOwnProperty('version'));
 		},
-		'has a name property': function(xdb) {
+		'returns an object with a name property': function(xdb) {
 			assert.isTrue(xdb.info() && xdb.info().hasOwnProperty('name'));
 		}
 	}
