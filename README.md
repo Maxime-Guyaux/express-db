@@ -52,6 +52,22 @@ _Example_:
 		viewCaching: true //cache views then requested
 	})
 
+####info()###
+
+####get(key)####
+
+####set(key, value)####
+
+####remove(key)####
+
+####backup(callback)####
+
+####search(query)####
+
+####createView(name, query)####
+
+####getViews()####
+
 ##Test##
 
 	npm test
