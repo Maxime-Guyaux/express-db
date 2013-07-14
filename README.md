@@ -2,7 +2,7 @@
 
 A simple local key-value store that integrates with your express.js application.
 
-**warning** This module is in very early stage of development. Serious issues, like performance, scalability or security may occur. use at your own risk!
+**WARNING** This module is in very early stage of development. Serious issues, like performance, scalability or security may occur. Use at your **OWN RISK**!
 If you want to help improve express-db, feel free to contribute by forking and sending pull requests!
 
 ##Installation##
