@@ -5,9 +5,13 @@
   },
   "data": {
     "foo": "bar",
-    "posts": {
-      "first": "blablba",
-      "second": "blablba"
-    }
+    "posts": [
+      {
+        "title": "lorem ipsum"
+      },
+      {
+        "title": "dolor sit amet"
+      }
+    ]
   }
 }

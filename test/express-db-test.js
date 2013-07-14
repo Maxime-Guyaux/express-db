@@ -2,12 +2,12 @@ var vows = require('vows'),
 	assert = require('assert'),
 	xdb = require('../lib/express-db');
 
-// xdb.init("vowsDB", {
-// 	file: './bin/vows.db.json', //custom db file, if necessary
-// 	restrictAccess: true, //restrict access via browser
-// 	autoSave: false//, //autosave enabled
-// 	//backupInterval: 60000 //interval in ms
-// });
+xdb.init("vows DB", {
+	file: './bin/vows.db.json', //custom db file, if necessary
+	restrictAccess: true, //restrict access via browser
+	autoSave: false//, //autosave enabled
+	//backupInterval: 60000 //interval in ms
+});
 
 vows.describe('express-db').addBatch({
 	'the express-db module': {
@@ -32,6 +32,18 @@ vows.describe('express-db').addBatch({
 		},
 		'has a backup method': function(xdb) {
 			assert.isFunction(xdb.backup);
+		}
+	},
+	'the info method': {
+		topic: xdb,
+		'returns an object': function(xdb) {
+			assert.isObject(xdb.info());
+		},
+		'has a version property': function(xdb) {
+			assert.isTrue(xdb.info() && xdb.info().hasOwnProperty('version'));
+		},
+		'has a name property': function(xdb) {
+			assert.isTrue(xdb.info() && xdb.info().hasOwnProperty('name'));
 		}
 	}
 }).export(module);
