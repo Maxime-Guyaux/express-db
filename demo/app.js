@@ -21,12 +21,13 @@ console.log('foo ? %s', xdb.get('foo'));
 xdb.remove('foo', function(err) {
 	console.log('is foo still here ? %s', xdb.get('foo'));
 });
-//search
-xdb.search('posts', function(res) {
+//search for the comments for page id 'page_1'
+xdb.search('stats.comments_lookup[{stats.page.id}]', function(res) {
 	console.log("search result: ", res);
 });
 //create view
 xdb.createView('blogposts', 'posts');
+xdb.createView('comments', 'stats.comments_lookup[{stats.page.id}]');
 //get views
 console.log(xdb.getViews());
 
