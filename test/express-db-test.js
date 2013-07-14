@@ -54,5 +54,12 @@ vows.describe('express-db').addBatch({
 		'returns an object with a name property': function(xdb) {
 			assert.isTrue(xdb.info() && xdb.info().hasOwnProperty('name'));
 		}
-	}
+	},
+	'the get method': {},
+	'the set method': {},
+	'the remove method': {},
+	'the search method': {},
+	'the backup method': {},
+	'the createView method': {},
+	'the getViews method': {}
 }).export(module);
