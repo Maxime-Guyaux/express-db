@@ -35,11 +35,12 @@ If you want to help improve express-db, feel free to contribute by forking and s
 the init method, to be passed to express for hook.
 
 Options:
- - file: (_optional_) path to your own db file
- - restrictAccess: (_optional_) true or false, restricts the access to the db on the client side
- - autoSave: (_optional_) enables automatic backup of the databse
- - backupInterval: (_optional_) the frequency (in ms) of backups
- - viewCaching: (_optional_) true or false, caches the view result on browser call
+
+ + file: (_optional_) path to your own db file
+ + restrictAccess: (_optional_) true or false, restricts the access to the db on the client side
+ + autoSave: (_optional_) enables automatic backup of the databse
+ + backupInterval: (_optional_) the frequency (in ms) of backups
+ + viewCaching: (_optional_) true or false, caches the view result on browser call
 
 ##Test##
 
