@@ -14,7 +14,7 @@ for(var i = 0; i < 100000; i++) {
 }
 var endSet = new Date();
 console.log("FINISHED SET TEST: %s", endSet.getTime().toString());
-console.log("100000 records set in : %s milliseconds", (endSet.getTime() - beginSet.getTime()).toString());
+console.log("100,000 records set in : %s milliseconds", (endSet.getTime() - beginSet.getTime()).toString());
 
 setTimeout(function() {
 	console.log("slept for 2 seconds");
@@ -25,5 +25,5 @@ setTimeout(function() {
 	}
 	var endGet = new Date();
 	console.log("FINISHED GET TEST: %s", endGet.getTime().toString());
-	console.log("100000 records get in : %s milliseconds", (endGet.getTime() - beginGet.getTime()).toString());
+	console.log("100,000 records get in : %s milliseconds", (endGet.getTime() - beginGet.getTime()).toString());
 }, 2000);

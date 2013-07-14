@@ -72,6 +72,20 @@ _Example_:
 
 	npm test
 
+##Performance##
+
+Tested on MacBook Air (1.7 Ghz Intel Core i5, 4Gb 1600Mhz DDR3):
+
+	STARTED SET TEST: 1373816191605
+	FINISHED SET TEST: 1373816192791
+	100,000 records set in : 1186 milliseconds
+	slept for 2 seconds
+	STARTED GET TEST: 1373816194793
+	FINISHED GET TEST: 1373816195584
+	100,000 records get in : 791 milliseconds
+
+You can run the test on your own computer by typing: `node demo/test.js`
+
 ##License##
 
 The MIT License (MIT)
