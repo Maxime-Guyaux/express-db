@@ -91,7 +91,16 @@ vows.describe('express-db').addBatch({
 			});
 		}
 	},
-	//'the backup method': {},
+	// 'the backup method': {
+	// 	topic: xdb,
+	// 	'can backup a database to file': function(xdb) {
+	// 		console.log(xdb.info());
+	// 		xdb.set('lorem', 'ipsum');
+	// 		xdb.backup(function(err) {
+	// 			assert.isNull(err);
+	// 		});
+	// 	}
+	// },
 	'the createView method': {
 		topic: xdb,
 		'can create a query view': function(xdb) {

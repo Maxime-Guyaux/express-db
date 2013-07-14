@@ -23,7 +23,7 @@ If you want to help improve express-db, feel free to contribute by forking and s
 			.listen(8081);
 
 	app.use(xdb.init("demo DB", {
-		file: '../db/demo.db.json', //custom db file, if necessary
+		file: './db/demo.db.json', //custom db file, if necessary
 		restrictAccess: false, //restrict access via browser
 		autoSave: true, //autosave enabled
 		backupInterval: 60000, //interval in ms,
@@ -47,7 +47,7 @@ _Options_:
 _Example_:
 
 	xdb.init("demo DB", {
-		file: '../db/demo.db.json', //custom db file, if necessary
+		file: './db/demo.db.json', //custom db file, if necessary
 		restrictAccess: false, //restrict access via browser
 		autoSave: true, //autosave enabled
 		backupInterval: 60000, //interval in ms,
@@ -123,7 +123,7 @@ If you so chose, you can use you own db file for backup. It will need to be a js
 You will then need to define it in the xdb constructor:
 
 	xdb.init("my custom DB", {
-		file: '../my.custom.db.json' // '../' is necessary
+		file: './my.custom.db.json'
 	});
 
 ##Test##
