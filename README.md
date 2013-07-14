@@ -23,7 +23,7 @@ If you want to help improve express-db, feel free to contribute by forking and s
 			.listen(8081);
 
 	app.use(xdb.init("demo DB", {
-		file: './bin/demo.db.json', //custom db file, if necessary
+		file: '../db/demo.db.json', //custom db file, if necessary
 		restrictAccess: false, //restrict access via browser
 		autoSave: true, //autosave enabled
 		backupInterval: 60000, //interval in ms,
