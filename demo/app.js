@@ -9,7 +9,8 @@ app.use(xdb.init("demo DB", {
 	file: './bin/demo.db.json', //custom db file, if necessary
 	restrictAccess: false, //restrict access via browser
 	autoSave: true, //autosave enabled
-	backupInterval: 60000 //interval in ms
+	backupInterval: 60000 ,//interval in ms,
+	viewCaching: true
 }));
 
 //set
