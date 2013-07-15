@@ -54,7 +54,7 @@ You will then need to define it in the express-db constructor:
 
 ###API Reference###
 
-####init(options)####
+####init(dbname, options)####
 
 the init method, to be passed to express for hook.
 
