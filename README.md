@@ -9,7 +9,7 @@ If you want to help improve express-db, feel free to contribute by forking and s
 
 ##Installation##
 
-	npm install express-db
+[![NPM](https://nodei.co/npm/express-db.png)](https://nodei.co/npm/express-db/)
 
 ##Usage##
 
